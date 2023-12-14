@@ -7,13 +7,14 @@ body {
     width: 100%;
 }
 
+/* ----------------------------------------------navbar--------------------------- */
 nav {
     background-color: #1E33A7;
     color: white;
     display: flex;
     padding: 10px;
     height: 30px;
-    
+
 }
 
 .navbar_left {
@@ -30,7 +31,7 @@ nav {
 .container {
     display: flex;
     height: 100vh;
-    
+
 }
 
 .navbar {
@@ -40,7 +41,7 @@ nav {
     width: 10%;
 }
 
-.navbar div {
+.navbar div{
     background-color: #1D9AB0;
     display: flex;
     justify-content: center;
@@ -50,7 +51,7 @@ nav {
     height: 30px;
 }
 
-.navbar div button {
+.navbar div button{
     background-color: #1D9AB0;
     display: flex;
     align-items: center;
@@ -58,15 +59,40 @@ nav {
     width: 100%;
     font-size: 10px;
     padding-left: 10px
-    
 }
 
-.navbar div button:hover{ 
+
+.navbar div button a {
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+a {
+    color: black;
+}
+
+.navbar div button:hover {
     background-color: #1E33A7;
     color: white;
     font-size: 15px;
+
+    a {
+        color: white;
+    }
+}
+
+.navbar .deshboard_button button{
+    background-color: #1E33A7;
+    color: white;
+}
+
+.deshboard_button a {
+    font-size: 15px;
+    color: white;
 }
 
 main {
     width: 90%;
 }
+
+/* ------------------------------------------------ */
