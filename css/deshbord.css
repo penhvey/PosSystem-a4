@@ -65,6 +65,7 @@ nav {
 .navbar div button a {
     margin-left: 5px;
     text-decoration: none;
+    
 }
 
 a {
@@ -84,6 +85,8 @@ a {
 .navbar .deshboard_button button{
     background-color: #1E33A7;
     color: white;
+    opacity: 2;
+    
 }
 
 .deshboard_button a {
@@ -93,6 +96,27 @@ a {
 
 main {
     width: 90%;
+}
+
+.title{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.title div{
+    background-color: #0de4e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    padding: 10px;
+}
+
+.title div span{
+    font-weight: bold;
+    color: #e4750d;
+    margin-left: 10px;
+    font-size: 30px;
 }
 
 /* ------------------------------------------------ */
