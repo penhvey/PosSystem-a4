@@ -41,7 +41,7 @@ nav {
     width: 10%;
 }
 
-.navbar div{
+.navbar div {
     background-color: #1D9AB0;
     display: flex;
     justify-content: center;
@@ -51,7 +51,7 @@ nav {
     height: 30px;
 }
 
-.navbar div button{
+.navbar div button {
     background-color: #1D9AB0;
     display: flex;
     align-items: center;
@@ -81,7 +81,7 @@ a {
     }
 }
 
-.navbar .order_button button{
+.navbar .order_button button {
     background-color: #1E33A7;
     color: white;
 }
@@ -93,6 +93,101 @@ a {
 
 main {
     width: 90%;
+}
+
+
+/* ======main card===== */
+.containerr{
+    margin-bottom: 18%;
+}
+#main-card {
+   margin-top: 20%;
+   padding-bottom: 5%;
+   
+}
+
+/* ------create-card------- */
+.scroll-1::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.scroll-1::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: #888;
+}
+
+.containerr * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+.card{
+    padding-bottom: 70%;
+}
+.containerr {
+    display: flex;
+    overflow-x: scroll;
+    margin-top: -20%;
+    padding: 24px;
+    padding-left: 77%;
+    width: 20%;
+    height: 40vh;
+    scroll-snap-type: x mandatory;
+    scroll-padding-top: 24px;
+    border-radius: 8px;
+    gap: 20px;
+}
+
+.containerr .card {
+    flex: 0 0 100%;
+    /* padding-bottom: 44%; */
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #141414;
+    scroll-snap-align: start;
+}
+
+.card .card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.card .card__content .card__title {
+    font-size: 32px;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.card .card__content .card__describe {
+    color: #fff;
+    font-size: 16px;
+}
+
+/* ===========Card Design=========== */
+.card__image {
+    margin-top: 6%;
+    margin-left: 10%;
+}
+.card__imag img{
+    margin-left: 7vh;
+}
+/* ---title--- */
+.card__content .card__title {
+    font-size: 1%;
+}
+.card__content {
+    margin-top: -9%;
+}
+
+/* ----main-right---- */
+#main-right {
+    display: grid;
+    grid-template-rows: 1 1 1 1;
+    grid-template-columns: 1 1 1 1;
 }
 
 /* ----------sub-main----------- */
@@ -117,18 +212,19 @@ main {
     text-align: center;
     margin-bottom: 8%;
 }
+
 .checkout .name-check {
     background-color: rgb(180, 174, 174);
     display: grid;
     grid-template-columns: 1% 1% 1%;
     gap: 20vh;
     height: 5vh;
-    padding: 3% 0 0 8% ;
+    padding: 3% 0 0 8%;
 }
 
 /* ------Total------- */
 .total {
-    background-color:  rgb(180, 174, 174);
+    background-color: rgb(180, 174, 174);
     margin-top: 90%;
     height: 5vh;
     padding-left: 10%;
@@ -137,19 +233,21 @@ main {
 
 /* ------Pay------ */
 .pay button {
-    background-color: rgb(22, 179, 241) ;
+    background-color: rgb(22, 179, 241);
     width: 30%;
     border-radius: 40px;
     margin-top: 6%;
     margin-left: 35%;
 
 }
+
 /* ----------------button search-------------- */
 .search {
-    margin-top: 3%;
-    margin-left: 50%; 
+    margin-top: 2%;
+    margin-left: 50%;
 }
-.search  input[type=text] {
+
+.search input[type=text] {
     /* margin-top: 5%; */
     padding: 10px;
     font-size: 17px;
@@ -159,6 +257,7 @@ main {
     background: #f1f1f1;
     border-radius: 30px;
 }
+
 .search input[type=submit] {
     float: left;
     width: 20%;
@@ -175,9 +274,15 @@ main {
 button {
     border: none;
     background-color: white;
-    font-size: 24px;
-    margin: 1% ;
+    font-size: 30px;
+    /* margin: 1%; */
+    margin-top: 0.3%;
+    margin-left: 1%;
 }
+
+
+/* =======Card-Product======== */
+
 
 
 /* ------------------------------------------------ */
