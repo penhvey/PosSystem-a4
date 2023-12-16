@@ -95,4 +95,41 @@ main {
     width: 90%;
 }
 
+
+/* ----------------button search-------------- */
+.search {
+    margin-top: 3%;
+    margin-left: 50%; 
+}
+.search  input[type=text] {
+    /* margin-top: 5%; */
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    border-radius: 30px;
+}
+.search input[type=submit] {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+
+}
+
+button {
+    border: none;
+    background-color: white;
+    font-size: 24px;
+    margin: 1% ;
+}
+
+
 /* ------------------------------------------------ */
