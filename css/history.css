@@ -119,8 +119,8 @@ main {
     margin-bottom: 30px;
     grid-template-columns: repeat(3, 1fr);
 
-    .date1,
-    .date2 {
+    .date-old,
+    .date-new {
         width: 25vh;
         height: 30px;
         padding-right: 5%;
@@ -132,22 +132,60 @@ main {
         gap: 6%;
         grid-template-columns: repeat(4, 1fr);
     }
-    .date2 img,.date1 img{
+
+    .date-new img,
+    .date-old img {
         margin-top: 5px;
         margin-left: 4%;
     }
-    #day-new,#day-old{
+
+    #day-new,
+    #day-old {
         margin-top: 40%;
     }
-    #month-new,#month-old{
+
+    #month-new,
+    #month-old {
         margin-top: 10%;
     }
-    #year-new,#year-old{
+
+    #year-new,
+    #year-old {
         margin-top: 19%;
     }
 }
+
 #text {
     margin-top: 8px;
-    margin-left: 40%;   
+    margin-left: 40%;
 }
 
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    background-color: aliceblue;
+    width: 80%;
+    text-align: center;
+    margin-left: 150px;
+}
+
+th {
+    height: 45px;
+    background-color: rgb(35, 181, 181);
+}
+
+tbody tr:hover {
+    cursor: pointer;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    padding: 8px;
+
+}
+
+tbody {
+    border-collapse: collapse;
+}
