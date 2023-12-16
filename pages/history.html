@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>History</title>
     <link rel="stylesheet" href="../css/history.css">
+    <script src="/js/main.js" defer></script>
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 
@@ -23,7 +24,8 @@
         <!-- ----------navbarLeft------------------------- -->
         <div class="navbar">
             <div class=" bu deshboard_button">
-                <button><i class='bx bxs-dashboard' style="font-size: 25px"></i><a href="deshbord.html">Dashboard</a></button>
+                <button><i class='bx bxs-dashboard' style="font-size: 25px"></i><a
+                        href="deshbord.html">Dashboard</a></button>
             </div>
             <div class=" bu product_button">
                 <button><i class='bx bxs-layout' style="font-size: 25px"></i><a href="product.html">Product</a></button>
@@ -36,7 +38,25 @@
             </div>
         </div>
         <!-- -------------------main-----------------------------     -->
-        <main></main>
+        <main>
+            <div class="history">
+                <h1>About history</h1>
+                <div class="date">
+                    <div class="date1"><img src="/Photo-history/date.png" width="20">
+                        <p id="day-old"></p>
+                        <p id="month-old"></p>
+                        <p id="year-old"></p>
+                    </div>
+                    <p id="text">To</p>
+                    <div class="date2">
+                        <img src="/Photo-history/date.png" width="20">
+                        <p id="day-new"></p>
+                        <p id="month-new"></p>
+                        <p id="year-new"></p>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
 </body>
 
