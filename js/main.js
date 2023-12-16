@@ -1,0 +1,17 @@
+// let date1=document.querySelector(".date1");
+const d=new Date();
+let day_new=d.getDate();
+document.querySelector("#day-new").innerHTML=day_new;
+const month_new = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+let name = month_new[d.getMonth()];
+document.getElementById("month-new").innerHTML = name;
+let year_new=d.getFullYear();
+document.querySelector("#year-new").innerHTML=year_new;
+// document.querySelector("#day-old").innerHTML=d;
+const month_old = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+let name_old = month_old[d.getMonth()];
+document.getElementById("month-old").innerHTML = name_old;
+let year_old=d.getFullYear();
+document.querySelector("#year-old").innerHTML=year_old;
+
+document.querySelector("#day-old").innerHTML=day_new-15;

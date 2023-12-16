@@ -5,6 +5,7 @@
 
 body {
     width: 100%;
+    transition: 1s ease-in-out;
 }
 
 /* ----------------------------------------------navbar--------------------------- */
@@ -41,7 +42,7 @@ nav {
     width: 10%;
 }
 
-.navbar div{
+.navbar div {
     background-color: #1D9AB0;
     display: flex;
     justify-content: center;
@@ -51,7 +52,7 @@ nav {
     height: 30px;
 }
 
-.navbar div button{
+.navbar div button {
     background-color: #1D9AB0;
     display: flex;
     align-items: center;
@@ -81,7 +82,7 @@ a {
     }
 }
 
-.navbar .history_button button{
+.navbar .history_button button {
     background-color: #1E33A7;
     color: white;
 }
@@ -96,3 +97,57 @@ main {
 }
 
 /* ------------------------------------------------ */
+.history {
+    width: 185vh;
+
+
+}
+
+
+
+.history h1 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+.date {
+    width: 60vh;
+    display: grid;
+    margin-left: 800px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    grid-template-columns: repeat(3, 1fr);
+
+    .date1,
+    .date2 {
+        width: 25vh;
+        height: 30px;
+        padding-right: 5%;
+        background-color: rgb(239, 239, 239);
+        border: 1px solid;
+        border-radius: 10px;
+        font-size: 15px;
+        display: grid;
+        gap: 6%;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .date2 img,.date1 img{
+        margin-top: 5px;
+        margin-left: 4%;
+    }
+    #day-new,#day-old{
+        margin-top: 40%;
+    }
+    #month-new,#month-old{
+        margin-top: 10%;
+    }
+    #year-new,#year-old{
+        margin-top: 19%;
+    }
+}
+#text {
+    margin-top: 8px;
+    margin-left: 40%;   
+}
+
