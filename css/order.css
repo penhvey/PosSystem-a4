@@ -95,4 +95,89 @@ main {
     width: 90%;
 }
 
+/* ----------sub-main----------- */
+#sub-main {
+    display: grid;
+    grid-template-columns: 30% 70%;
+
+}
+
+.checkout {
+    background-color: rgb(230, 230, 230);
+    height: 100vh;
+
+}
+
+.checkout h2 {
+    background-color: rgb(44, 107, 224);
+    width: 50%;
+    height: 5vh;
+    margin-left: 27%;
+    margin-top: 7%;
+    text-align: center;
+    margin-bottom: 8%;
+}
+.checkout .name-check {
+    background-color: rgb(180, 174, 174);
+    display: grid;
+    grid-template-columns: 1% 1% 1%;
+    gap: 20vh;
+    height: 5vh;
+    padding: 3% 0 0 8% ;
+}
+
+/* ------Total------- */
+.total {
+    background-color:  rgb(180, 174, 174);
+    margin-top: 90%;
+    height: 5vh;
+    padding-left: 10%;
+    padding-top: 4%;
+}
+
+/* ------Pay------ */
+.pay button {
+    background-color: rgb(22, 179, 241) ;
+    width: 30%;
+    border-radius: 40px;
+    margin-top: 6%;
+    margin-left: 35%;
+
+}
+/* ----------------button search-------------- */
+.search {
+    margin-top: 3%;
+    margin-left: 50%; 
+}
+.search  input[type=text] {
+    /* margin-top: 5%; */
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    border-radius: 30px;
+}
+.search input[type=submit] {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+
+}
+
+button {
+    border: none;
+    background-color: white;
+    font-size: 24px;
+    margin: 1% ;
+}
+
+
 /* ------------------------------------------------ */

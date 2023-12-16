@@ -7,6 +7,7 @@
     <title>Desaboard</title>
     <link rel="stylesheet" href="../css/order.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -23,7 +24,8 @@
         <!-- ----------navbarLeft------------------------- -->
         <div class="navbar">
             <div class=" bu deshboard_button">
-                <button><i class='bx bxs-dashboard' style="font-size: 25px"></i><a href="deshbord.html">Dashboard</a></button>
+                <button><i class='bx bxs-dashboard' style="font-size: 25px"></i><a
+                        href="deshbord.html">Dashboard</a></button>
             </div>
             <div class=" bu product_button">
                 <button><i class='bx bxs-layout' style="font-size: 25px"></i><a href="product.html">Product</a></button>
@@ -36,7 +38,30 @@
             </div>
         </div>
         <!-- -------------------main-----------------------------     -->
-        <main></main>
+        <main>
+            <div id="sub-main">
+                <!-- ----checkout------ -->
+                <div class="checkout">
+                    <h2>Checkout</h2>
+                    <div class="name-check">
+                        <p>Name</p>
+                        <p>QTY</p>
+                        <p>Price</p>
+                    </div>
+                    <div class="total">
+                        <p>Total:</p>
+                    </div>
+                    <div class="pay">
+                        <button>Pay</button>
+                    </div>
+                </div>
+                <!-- ----btn search---- -->
+                <form class="search">
+                    <input type="text" placeholder="Search category name" name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </main>
     </div>
 </body>
 
