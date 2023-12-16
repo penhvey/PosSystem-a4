@@ -16,5 +16,20 @@ function date() {
 
 }
 date()
+let tbody = document.getElementsByTagName("img");
+let tr = document.getElementsByTagName("tr");
+
+for (let i = 0; i <tr.length;i++){
+    tr[i].children[4].addEventListener('click', deleteRow);
+}
+
+function deleteRow(e){
+    if (window.confirm("Do you want to delete?")){
+        e.target.closest('tr').remove();
+    }
+}
+
+
+
 
 
