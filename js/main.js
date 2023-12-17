@@ -1,3 +1,4 @@
+//........Date............ 
 function date() {
     const d = new Date();
     let day_new = d.getDate();
@@ -7,7 +8,7 @@ function date() {
     document.getElementById("month-new").innerHTML = name;
     let year_new = d.getFullYear();
     document.querySelector("#year-new").innerHTML = year_new;
-    document.querySelector("#day-old").innerHTML = day_new - day_new + 1;
+    document.querySelector("#day-old").innerHTML = 1-day_new + day_new;
     const month_old = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     let name_old = month_old[d.getMonth()];
     document.getElementById("month-old").innerHTML = name_old;
@@ -16,6 +17,7 @@ function date() {
 
 }
 date()
+//...........table delete......
 let tbody = document.getElementsByTagName("img");
 let tr = document.getElementsByTagName("tr");
 
