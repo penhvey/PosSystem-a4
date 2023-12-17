@@ -99,15 +99,17 @@ main {
 /* ------------------------------------------------ */
 .history {
     width: 185vh;
-
-
+}
+.date-title{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
 }
 #icon-search{
     width: 30vh;
     height: 30px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    margin-left: 25vh;
+    margin-left: 76%;
     margin-bottom: 10px;
     border: none;
     /* border-radius: 14px; */
@@ -122,23 +124,32 @@ main {
 #icon-search input{
     width: 78px;
     text-align: center;
-    /* border: none; */
     border-radius: 1px;
     padding-right: 70px;
     padding-left: 3%;
 }
 
-.history h1 {
-    text-align: center;
+.history .title{
+    width: 60vh;
+    margin-left: 5%;
     margin-top: 40px;
+    margin-bottom: 3%;
+}
+.p{
+    width: 20%;
+    margin-top: 1%;
+    margin-left: 13%;
+}
+hr{
+    margin-left: 2%;
 }
 
 
 .date {
     width: 60vh;
     display: grid;
-    margin-left: 800px;
-    margin-top: 10px;
+    margin-left: 50vh;
+    margin-top: 2%;
     margin-bottom: 30px;
     grid-template-columns: repeat(3, 1fr);
 
@@ -187,7 +198,6 @@ main {
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    background-color: aliceblue;
     width: 80%;
     text-align: center;
     margin-left: 150px;

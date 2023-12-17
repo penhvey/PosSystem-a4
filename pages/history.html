@@ -9,7 +9,7 @@
     <script src="/js/main.js" defer></script>
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
 </head>
 
 <body>
@@ -27,7 +27,7 @@
         <div class="navbar">
             <div class=" bu deshboard_button">
                 <button><i class='bx bxs-dashboard' style="font-size: 25px"></i><a
-                    href="deshbord.html">Dashboard</a></button>
+                        href="deshbord.html">Dashboard</a></button>
             </div>
             <div class=" bu product_button">
                 <button><i class='bx bxs-layout' style="font-size: 25px"></i><a href="product.html">Product</a></button>
@@ -42,26 +42,38 @@
         <!-- -------------------main-----------------------------     -->
         <main>
             <div class="history">
-                <h1>About history</h1>
-                <div class="date">
-                    <div class="date-old"><img src="/Photo-history/date.png" width="20">
-                        <p id="day-old"></p>
-                        <p id="month-old"></p>
-                        <p id="year-old"></p>
+                <div class="date-title">
+                    <div class="title">
+                        <h1>Order history</h1>
+                        <p>Manage your recent orders</p>
                     </div>
-                    <p id="text">To</p>
-                    <div class="date-new">
-                        <img src="/Photo-history/date.png" width="20">
-                        <p id="day-new"></p>
-                        <p id="month-new"></p>
-                        <p id="year-new"></p>
+
+                    <div class="date">
+                        <div class="date-old"><img src="/Photo-history/date.png" width="20">
+                            <p id="day-old"></p>
+                            <p id="month-old"></p>
+                            <p id="year-old"></p>
+                        </div>
+                        <p id="text">To</p>
+                        <div class="date-new">
+                            <img src="/Photo-history/date.png" width="20">
+                            <p id="day-new"></p>
+                            <p id="month-new"></p>
+                            <p id="year-new"></p>
+                        </div>
                     </div>
+                </div>
+
+                <hr>
+                <div class="p">
+                    <h4>Order details</h4>
+                    <p>Review and manage recent orders.</p>
                 </div>
                 <div id="icon-search">
                     <i class="fa fa-search"></i>
-                    <input class="input-field" type="text" placeholder="Search name" id="search">
+                    <input type="text" placeholder="Search name" id="search">
                 </div>
-                
+
                 <table>
                     <thead>
                         <tr>
@@ -77,6 +89,13 @@
                         <tr>
                             <td>#1</td>
                             <td>Samorn</td>
+                            <td></td>
+                            <td></td>
+                            <td><img src="/Photo-history/remove.png" width="20"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td><img src="/Photo-history/remove.png" width="20"></td>
