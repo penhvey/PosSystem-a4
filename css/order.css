@@ -5,6 +5,7 @@
 
 body {
     width: 100%;
+    height: auto;
 }
 
 /* ----------------------------------------------navbar--------------------------- */
@@ -30,7 +31,7 @@ nav {
 
 .container {
     display: flex;
-    height: 100vh;
+    height: auto;
 
 }
 
@@ -92,197 +93,167 @@ a {
 }
 
 main {
-    width: 90%;
-}
-
-
-/* ======main card===== */
-.containerr{
-    margin-bottom: 18%;
-}
-#main-card {
-   margin-top: 20%;
-   padding-bottom: 5%;
-   
-}
-
-/* ------create-card------- */
-.scroll-1::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-
-.scroll-1::-webkit-scrollbar-thumb {
-    border-radius: 20px;
-    background: #888;
-}
-
-.containerr * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    color: #fff;
-}
-.card{
-    padding-bottom: 70%;
-}
-.containerr {
     display: flex;
-    overflow-x: scroll;
-    margin-top: -20%;
-    padding: 24px;
-    padding-left: 77%;
-    width: 20%;
-    height: 40vh;
-    scroll-snap-type: x mandatory;
-    scroll-padding-top: 24px;
-    border-radius: 8px;
-    gap: 20px;
+    background-color:  #1638f72d;
+    width: 90%;
+    height: 1500px;
 }
 
-.containerr .card {
-    flex: 0 0 100%;
-    /* padding-bottom: 44%; */
-    overflow: hidden;
-    border-radius: 8px;
-    background-color: #141414;
-    scroll-snap-align: start;
-}
-
-.card .card__content {
+main .cardorders {
+    background: #00000038;
+    padding: 10px 10px 0 10px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    justify-content: space-between;
+    text-align: center;
+    border: 1px solid #1638f7;
+    width: 25%;
+    height: 550px;
+}
+
+main .cardorders #h {
+    background-color: #1638f721;
+    width: 100%;
+    height: 100%;
+}
+
+main .cardorders .cardorder {
+    background: #c921cf3d;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+    border: 1px solid #cf09e9;
+    border-radius: 5px;
+    width: 93%;
+    height: 30px;
+    font-size: 20px;
+    margin: 10px;
+}
+
+main .cardorders .cardorder #nameorder {
+    font-weight: bold;
+    color: rgb(255, 102, 0);
+}
+
+main .cardorders .cardorder #orderqtl {
+    color: rgb(255, 72, 0);
+}
+
+main .cardorders .result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .cardorders .result .sumit button {
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+main .cardorders .result .sumit #cancelorder {
+    border: none;
+    background-color: rgb(194, 4, 4);
+}
+
+main .cardorders .result .sumit #cancelorder:hover {
+    border: none;
+    background-color: red;
+}
+
+main .cardorders .result .sumit #order {
+    border: none;
+    width: 50px;
+    background-color: #1E33A7;
+}
+
+main .cardorders .result .sumit #order:hover {
+    background-color: #1638f7;
+}
+
+main .cardorders .result .ortotal {
+    display: flex;
+    align-items: center;
+}
+
+main .cardorders .result .ortotal span {
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #1638f7;
+}
+
+main .products {
+    /* background-color: #1638f72d; */
+    width: 75%;
+}
+
+main .products .ordertitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 5%;
+}
+main .products .ordertitle .ordersearch{
+    display: flex;
+    align-items: center;
+    border: 1px solid #060f94;
+    background: white;
+
+}
+main .products .ordertitle .ordersearch input{
+    text-align: center;
+    height: 20px;
+    border: none;
+    outline: none;
+
+}
+main .products .ordertitle .ordersearch input:focus::placeholder {
+    color: transparent;
+}
+
+
+main .products .contents h2{
+   background: #0d1acc3a;
+    color: rgb(7, 5, 109);
+}
+
+main .products .contents div .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 38px;
     padding: 20px;
 }
 
-.card .card__content .card__title {
-    font-size: 32px;
-    color: #fff;
-    text-transform: capitalize;
+main .products .contents div .content .card {
+    background-color: #8e9efa9f;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100px;
 }
 
-.card .card__content .card__describe {
-    color: #fff;
-    font-size: 16px;
+main .products .contents div .content .card .cardtitle{
+    padding: 5px;
 }
-
-/* ===========Card Design=========== */
-.card__image {
-    margin-top: 6%;
-    margin-left: 10%;
-}
-.card__imag img{
-    margin-left: 7vh;
-}
-/* ---title--- */
-.card__content .card__title {
-    font-size: 1%;
-}
-.card__content {
-    margin-top: -9%;
-}
-
-/* ----main-right---- */
-#main-right {
-    display: grid;
-    grid-template-rows: 1 1 1 1;
-    grid-template-columns: 1 1 1 1;
-}
-
-/* ----------sub-main----------- */
-#sub-main {
-    display: grid;
-    grid-template-columns: 30% 70%;
-
-}
-
-.checkout {
-    background-color: rgb(230, 230, 230);
-    height: 100vh;
-
-}
-
-.checkout h2 {
-    background-color: rgb(44, 107, 224);
-    width: 50%;
-    height: 5vh;
-    margin-left: 27%;
-    margin-top: 7%;
+main .products .contents h2{
     text-align: center;
-    margin-bottom: 8%;
+}
+main .products .contents div .content .card .cardtitle div {
+    display: flex;
+}
+main .products .contents div .content .card .cardtitle div span{
+    color: #060f94;
+    font-weight: bold;
+    padding-left: 5px;
 }
 
-.checkout .name-check {
-    background-color: rgb(180, 174, 174);
-    display: grid;
-    grid-template-columns: 1% 1% 1%;
-    gap: 20vh;
-    height: 5vh;
-    padding: 3% 0 0 8%;
+main .products .contents div .content .card .cardimg {
+    background-color: rgba(134, 235, 204, 0.5);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
 }
-
-/* ------Total------- */
-.total {
-    background-color: rgb(180, 174, 174);
-    margin-top: 90%;
-    height: 5vh;
-    padding-left: 10%;
-    padding-top: 4%;
-}
-
-/* ------Pay------ */
-.pay button {
-    background-color: rgb(22, 179, 241);
-    width: 30%;
-    border-radius: 40px;
-    margin-top: 6%;
-    margin-left: 35%;
-
-}
-
-/* ----------------button search-------------- */
-.search {
-    margin-top: 2%;
-    margin-left: 50%;
-}
-
-.search input[type=text] {
-    /* margin-top: 5%; */
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 80%;
-    background: #f1f1f1;
-    border-radius: 30px;
-}
-
-.search input[type=submit] {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #2196F3;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
-    cursor: pointer;
-
-}
-
-button {
-    border: none;
-    background-color: white;
-    font-size: 30px;
-    /* margin: 1%; */
-    margin-top: 0.3%;
-    margin-left: 1%;
-}
-
-
-/* =======Card-Product======== */
-
 
 
 /* ------------------------------------------------ */
