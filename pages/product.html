@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desaboard</title>
+    <title>Products</title>
     <link rel="stylesheet" href="../css/product.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="../js/product.js" defer></script>
 </head>
 
 <body>
@@ -23,7 +24,8 @@
         <!-- ----------navbarLeft------------------------- -->
         <div class="navbar">
             <div class=" bu deshboard_button">
-                <button><i class='bx bxs-dashboard' style="font-size: 25px"></i><a href="deshbord.html">Dashboard</a></button>
+                <button><i class='bx bxs-dashboard' style="font-size: 25px"></i><a
+                        href="deshbord.html">Dashboard</a></button>
             </div>
             <div class=" bu product_button">
                 <button><i class='bx bxs-layout' style="font-size: 25px"></i><a href="#">Product</a></button>
@@ -36,7 +38,119 @@
             </div>
         </div>
         <!-- -------------------main-----------------------------     -->
-        <main></main>
+        <main>
+            <div class="title_of_product">
+                <div class="add_product">
+                    <i class='bx bxs-plus-circle bx-flip-horizontal'
+                        style="font-size: 40px;color: rgb(46, 46, 248);"></i>
+                    <span>Add product</span>
+                </div>
+                <div class="search_product">
+                    <input type="text" id="search_product" placeholder="Search product by name">
+                    <i class='bx bx-search'
+                        style="font-size: 40px;background: rgb(46, 46, 248);color: white;border-radius:0 10px 10px 0;"></i>
+                </div>
+                <div class="filler_category">
+                    <h3>Filler by Category :</h3>
+                    <select id="dropdown">
+                        <option value="All Categorys" id="op">All Categorys</option>
+                        <option value="Drink" id="op">Drink</option>
+                        <option value="Coffee" id="op">Coffee</option>
+                        <option value="Desert" id="op">Desert</option>
+                        <option value="Snack" id="op">Snack</option>
+                    </select>
+                    <button type="submit" id="view">View</button>
+                </div>
+            </div>
+            <div class="display">
+                <div class="get_product">
+                    <h3>Add product</h3>
+                    <form name="myform">
+                        <div class="product_name">
+                            <p>Product name:</p>
+                            <input type="text" id="input_name_product">
+                        </div>
+                        <div class="product_quatity">
+                            <p>Qualitity:</p>
+                            <input type="number" id="qualitity">
+                        </div>
+                        <div class="product_price">
+                            <p>Price:</p>
+                            <input type="text" id="price" placeholder="$">
+                        </div>
+                        <div class="category">
+                            <p>Category:</p>
+                            <select id="Category">
+                                <option value="Drink">Drink</option>
+                                <option value="Coffee">Coffee</option>
+                                <option value="Desert">Desert</option>
+                                <option value="Snack">Snack</option>
+                            </select>
+                        </div>
+                        <div class="sumit">
+                            <button type="cancel" id="cancel">Cancel</button>
+                            <button type="add" id="add">Add</button>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="list_of_product">
+                    <h2 id="typ">All Categorys</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#ID</th>
+                                <th>Product name</th>
+                                <th>Qualitity</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <!-- <tr>
+                            <td>0001</td>
+                            <td>Late</td>
+                            <td>10</td>
+                            <td>15$</td>
+                            <td>
+                                <i class='bx bxs-trash' style="font-size: 25px;color: red;"></i>
+                                <i class='bx bx-edit' style="font-size: 25px"></i>
+                            </td>
+                        </tr> -->
+                        <!-- <tbody>
+                        </tbody> -->
+                    </table>
+                </div>
+                <div class="editProduct">
+                    <h3>Edite: Product</h3>
+                    <div class="name">
+                        <span>Name: </span>
+                        <input type="text" id="editename">
+                    </div>
+                    <div class="qutl">
+                        <span>Qualitity:</span>
+                        <input type="number" id="editeqlt">
+                    </div>
+                    <div class="price">
+                        <span>Price:</span>
+                        <input type="text" id="editeprice">
+                    </div>
+                    <div class="kind">
+                        <span>Category:</span>
+                        <select id="category">
+                            <option value="Drink">Drink</option>
+                            <option value="Coffee">Coffee</option>
+                            <option value="Desert">Desert</option>
+                            <option value="Snack">Snack</option>
+                        </select>
+                    </div>
+                    <div class="respon">
+                        <button type="cancel" id="can">Cancel</button>
+                        <button type="add" id="sum">Edite</button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
     </div>
 </body>
 
