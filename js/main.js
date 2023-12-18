@@ -17,35 +17,10 @@ function date() {
 
 }
 date()
-//...........table delete......
-let tbody = document.getElementsByTagName("img");
-let tr = document.getElementsByTagName("tr");
 
-for (let i = 0; i < tr.length; i++) {
-    tr[i].children[4].addEventListener('click', deleteRow);
-}
-
-function deleteRow(e) {
-    if (window.confirm("Do you want to delete?")) {
-        e.target.closest('tr').remove();
-    }
-}
-//---------button search---------
-let searcher = document.querySelector("#icon-search");
-const searchMovieTitle = () => {
-    for (let i = 1; i < tr.length; i++) {
-        let tr1 = tr[i].firstElementChild.nextElementSibling;
-        if (tr1.textContent.toLocaleLowerCase().includes(searchText.value.toLocaleLowerCase())) {
-            tr1.parentElement.style.display = 'table-row';
-        } else {
-            tr1.parentElement.style.display = 'none';
-        }
-    }
-}
-const searchText = document.querySelector('#search');
-searchText.addEventListener('keyup', searchMovieTitle);
 //.......table..........
-let Tbody = document.querySelector("tbody");
+let Tbody = document.querySelector("#tbody");
+
 let trOftbody = document.createElement("tr");
 trOftbody.style.padding = "10px";
 let tdOfId = document.createElement("td");
@@ -74,9 +49,20 @@ button.style.border = 'none';
 button.style.borderRadius = '4px';
 tdOfAction.appendChild(button);
 trOftbody.appendChild(tdOfAction);
-Tbody.append(trOftbody)
+Tbody.appendChild(trOftbody)
 
+//.........Dalete button........
 
+for (let i = 0; i < Tbody.children.length; i++) {
+    Tbody.children[0].children[4].addEventListener('click', deleteRow);
+    
+}
+
+function deleteRow(e) {
+    if (window.confirm("Do you want to delete?")) {
+        Tbody.children[0].remove()
+    }
+}
 
 
 
