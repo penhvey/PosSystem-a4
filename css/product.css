@@ -82,6 +82,7 @@ a {
     }
 }
 
+
 .navbar .product_button button {
     background-color: #1E33A7;
     color: white;
@@ -221,8 +222,9 @@ td {
     background: #1d9ab0b2;
     display: none;
     width: 25%;
-    height: 320px;
+    height: 390px;
     padding: 5px;
+    padding-top: 10px;
     color: white;
 }
 
@@ -235,6 +237,28 @@ form div {
     flex-direction: column;
     height: 50px;
     margin: 10px;
+}
+
+#numberimg input{
+    width: 30px;
+    height: 100%;
+}
+#numberimg{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+}
+#id{
+    font-size: 20px;
+    color: #000;
+}
+
+#ImageForAdd{
+    display: none;
+}
+#numberimg i:hover{
+    background-color: #f8a444;
 }
 
 form div input {

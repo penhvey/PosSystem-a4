@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/order.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../js/order.js" defer></script>
 </head>
 
 <body>
@@ -17,15 +18,14 @@
             <h1>Possystem</h1>
         </div>
         <div class="navbar_right">
-            <i class='bx bxs-user-circle' style="font-size: 30px"></i>
+            <i class='bx bxs-user-circle' style="font-size: 30px;"></i>
         </div>
     </nav>
     <div class="container">
         <!-- ----------navbarLeft------------------------- -->
         <div class="navbar">
             <div class=" bu deshboard_button">
-                <button><i class='bx bxs-dashboard' style="font-size: 25px"></i>
-                    <ahref="deshbord.html">Dashboard</a>
+                <button><i class='bx bxs-dashboard' style="font-size: 25px"></i><a href="deshbord.html">Dashboard</a>
                 </button>
             </div>
             <div class=" bu product_button">
@@ -43,25 +43,18 @@
             <div class="cardorders">
                 <div id="h">
                     <h2>Order Card</h2>
-                    <div class="cardorder">
+                    <!-- <div class="cardorder">
                         <span id="nameorder">Tea</span>
                         <span id="orderprice">price: 100$</span>
                         <i class='bx bxs-minus-circle'></i>
                         <span id="orderqtl">0</span>
                         <i class='bx bxs-plus-circle'></i>
-                    </div>
-                    <div class="cardorder">
-                        <span id="nameorder">Tea</span>
-                        <span id="orderprice">price: 100$</span>
-                        <i class='bx bxs-minus-circle'></i>
-                        <span id="orderqtl">0</span>
-                        <i class='bx bxs-plus-circle'></i>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="result">
                     <div class="ortotal">
                         <h2>Total:</h2>
-                        <span>100$</span>
+                        <span id="totalOrder">0$</span>
                     </div>
                     <div class="sumit">
                         <button type="cancel" id="cancelorder">Cancel</button>
@@ -74,108 +67,34 @@
                     <h1>Coffee Shop</h1>
                     <div class="ordersearch">
                         <input type="text" placeholder="Search product by name">
-                        <i class='bx bx-search' style="font-size: 25px;"></i>
+                        <i class='bx bx-search' style="font-size: 25px;color: blue;"></i>
                     </div>
 
                 </div>
                 <div class="contents">
                     <div class="Drinks">
                         <h2>Drink</h2>
-                        <div class="content">
-                            <div class="card">
-                                <div class="cardimg">
-                                    <img src="../Photos/coffee/coffee1.png" width="80">
-                                </div>
-                                <div class="cardtitle">
-                                    <div class="name">
-                                        <h6>Name:</h6>
-                                        <span>Coffee</span>
-                                    </div>
-                                    <div class="qtl">
-                                        <h6>Quality:</h6>
-                                        <span>3</span>
-                                    </div>
-                                    <div class="price">
-                                        <h6>Price:</h6>
-                                        <span>10$</span>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="content" id="drinks">
                         </div>
                     </div>
                     <!-- ------------------------------------------------- -->
                     <div class="Coffee">
                         <h2>Coffee</h2>
-                        <div class="content">
-                            <div class="card">
-                                <div class="cardimg">
-                                    <img src="../Photos/coffee/coffee1.png" width="80">
-                                </div>
-                                <div class="cardtitle">
-                                    <div class="name">
-                                        <h6>Name:</h6>
-                                        <span>Coffee</span>
-                                    </div>
-                                    <div class="qtl">
-                                        <h6>Quality:</h6>
-                                        <span>3</span>
-                                    </div>
-                                    <div class="price">
-                                        <h6>Price:</h6>
-                                        <span>10$</span>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="content" id="coffees">
+
                         </div>
                     </div>
                     <!-- ----------------------------------------- -->
                     <div class="Desert">
                         <h2>Desert</h2>
-                        <div class="content">
-                            <div class="card">
-                                <div class="cardimg">
-                                    <img src="../Photos/coffee/coffee1.png" width="80">
-                                </div>
-                                <div class="cardtitle">
-                                    <div class="name">
-                                        <h6>Name:</h6>
-                                        <span>Coffee</span>
-                                    </div>
-                                    <div class="qtl">
-                                        <h6>Quality:</h6>
-                                        <span>3</span>
-                                    </div>
-                                    <div class="price">
-                                        <h6>Price:</h6>
-                                        <span>10$</span>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="content" id="deserts">
                         </div>
                     </div>
                     <!-- -------------------------------------- -->
                     <div class="snack">
                         <h2>snack</h2>
-                        <div class="content">
-                            <div class="card">
-                                <div class="cardimg">
-                                    <img src="../Photos/coffee/coffee1.png" width="80">
-                                </div>
-                                <div class="cardtitle">
-                                    <div class="name">
-                                        <h6>Name:</h6>
-                                        <span>Coffee</span>
-                                    </div>
-                                    <div class="qtl">
-                                        <h6>Quality:</h6>
-                                        <span>3</span>
-                                    </div>
-                                    <div class="price">
-                                        <h6>Price:</h6>
-                                        <span>10$</span>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="content" id="snacks">
+
                         </div>
                     </div>
                 </div>

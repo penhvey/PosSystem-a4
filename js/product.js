@@ -15,7 +15,23 @@ let buttonAdd = document.querySelector('#add');
 
 let editing = document.querySelector('.editProduct');
 
+let chossimg = document.querySelector('#showimge');
+let imgforchoos = document.querySelector('#ImageForAdd');
 
+
+chossimg.addEventListener('mouseover',function (){
+    imgforchoos.style.display='block'
+    listProduct.style.display='none'
+})
+chossimg.addEventListener('mouseout',function (){
+    imgforchoos.style.display='none'
+    listProduct.style.display='block'
+})
+
+
+
+let numberImg = document.querySelector('#numberimg input');
+let editNumberImage = document.querySelector('#editnumberimg');
 
 let data = {
   Drink: [],
@@ -105,9 +121,8 @@ function gotListTypOfProduct(n, product, tbody) {
   tdAction.appendChild(edite)
 
   edite.addEventListener('click', getEdite)
-  console.log(data)
-}
 
+}
 
 function viewKindOfProduct() {
   if (kindOfProduct.value != 'All Categorys') {
@@ -146,19 +161,16 @@ function deletProduct(e) {
   }
 }
 
-
 // Add input value to the data array
 function addItem() {
 
   let proceses = {};
 
-  if (addNameProduct.value != '' && addQualitityProduct.value != '' && addPriceProduct.value != '') {
+  if (addNameProduct.value != '' && addQualitityProduct.value != '' && addPriceProduct.value != '' && numberImg.value != '') {
     proceses.name = addNameProduct.value;
     proceses.qtl = addQualitityProduct.value;
     proceses.price = addPriceProduct.value;
-
-
-    console.log(addCategoryProduct.value)
+    proceses.numberImg = numberImg.value
     if (addCategoryProduct.value === 'Drink') {
       data.Drink.push(proceses);
       saveData();
@@ -219,8 +231,8 @@ let editeCategory = document.querySelector('#category');
 let editadd = document.querySelector('#sum');
 
 
-let editCancel=document.querySelector('#can');
-editCancel.addEventListener('click',function (){
+let editCancel = document.querySelector('#can');
+editCancel.addEventListener('click', function () {
   editing.style.display = 'none';
   listProduct.style.width = '90%';
 })
@@ -237,6 +249,14 @@ function getEdite(e) {
   editeQlt.value = e.target.parentElement.parentElement.firstElementChild.nextSibling.nextSibling.textContent;
   editePrice.value = e.target.parentElement.parentElement.firstElementChild.nextSibling.nextSibling.nextSibling.textContent;
 
+  for (let value in data) {
+    for (let i of data[value]) {
+      if (edName === i.name) {
+        editNumberImage.value = i.numberImg
+      }
+    }
+  }
+
   for (let stocks in data) {
 
     for (let i = 0; i < data[stocks].length; i++) {
@@ -251,6 +271,7 @@ function getEdite(e) {
             obj.name = editeName.value;
             obj.qtl = editeQlt.value;
             obj.price = editePrice.value;
+            obj.numberImg = editNumberImage.value
 
             for (value of data[editeCategory.value]) {
               if (value.name === obj.name) {
