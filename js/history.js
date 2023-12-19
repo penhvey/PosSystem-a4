@@ -63,3 +63,10 @@ function deleteRow(e) {
         Tbody.children[0].remove()
     }
 }
+
+// =======Dark Mode======
+
+function myMode() {
+    var dark = document.body;
+    dark.classList.toggle('dark-mode');
+  }
