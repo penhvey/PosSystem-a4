@@ -16,50 +16,67 @@ function date() {
     document.querySelector("#year-old").innerHTML = year_old;
 
 }
-date()
+date();
 
 //.......table..........
 let Tbody = document.querySelector("#tbody");
+function table() {
+    let trOftbody = document.createElement("tr");
+    trOftbody.style.padding = "10px";
+    let tdOfId = document.createElement("td");
+    tdOfId.textContent = "#12";
+    trOftbody.appendChild(tdOfId);
 
-let trOftbody = document.createElement("tr");
-trOftbody.style.padding = "10px";
-let tdOfId = document.createElement("td");
-tdOfId.textContent = "#12";
-trOftbody.appendChild(tdOfId);
+    let tdOfName = document.createElement("td");
+    tdOfName.textContent = "SS";
+    trOftbody.appendChild(tdOfName);
 
-let tdOfName = document.createElement("td");
-tdOfName.textContent = "Sovannarith";
-trOftbody.appendChild(tdOfName);
+    let tdOfDate = document.createElement("td");
+    tdOfDate.textContent = "12 / Dec / 2023";
+    trOftbody.appendChild(tdOfDate);
 
-let tdOfDate = document.createElement("td");
-tdOfDate.textContent = "12 / Dec / 2023";
-trOftbody.appendChild(tdOfDate);
+    let tdOfTotal = document.createElement("td");
+    tdOfTotal.textContent = "100$";
+    trOftbody.appendChild(tdOfTotal);
 
-let tdOfTotal = document.createElement("td");
-tdOfTotal.textContent = "100$";
-trOftbody.appendChild(tdOfTotal);
-
-let tdOfAction = document.createElement("td");
-let button = document.createElement("button");
-button.textContent = "Delete";
-button.style.backgroundColor = "red";
-button.style.color = 'white';
-button.style.padding = '5px 10px';
-button.style.border = 'none';
-button.style.borderRadius = '4px';
-tdOfAction.appendChild(button);
-trOftbody.appendChild(tdOfAction);
-Tbody.appendChild(trOftbody)
+    let tdOfAction = document.createElement("td");
+    let button = document.createElement("button");
+    button.textContent = "Delete";
+    button.style.backgroundColor = "red";
+    button.style.color = 'white';
+    button.style.padding = '5px 10px';
+    button.style.border = 'none';
+    button.style.borderRadius = '4px';
+    tdOfAction.appendChild(button);
+    trOftbody.appendChild(tdOfAction);
+    Tbody.appendChild(trOftbody)
+}
+table();
 
 //.........Dalete button........
-
-for (let i = 0; i < Tbody.children.length; i++) {
-    Tbody.children[0].children[4].addEventListener('click', deleteRow);
-    
-}
-
-function deleteRow(e) {
-    if (window.confirm("Do you want to delete?")) {
-        Tbody.children[0].remove()
+function deleteRows() {
+    for (let i = 0; i < Tbody.children.length; i++) {
+        Tbody.children[0].children[4].addEventListener('click', deleteRow);
+    }
+    function deleteRow() {
+        if (window.confirm("Do you want to delete?")) {
+            Tbody.children[0].remove()
+        }
     }
 }
+deleteRows();
+
+//....button search..............
+let searchInput = document.querySelector("#search");
+function btnSearch() {
+    if (Tbody.children[0].children[1]) {
+        let nameOf_history = Tbody.children[0].children[1].textContent;
+        if (nameOf_history.toUpperCase() || nameOf_history.toLocaleLowerCase()) {
+            Tbody.style.display=Tbody.children[0];
+            console.log(nameOf_history.toLocaleLowerCase())
+
+        } else {
+            Tbody.style.display = "none";
+        }
+}   }
+btnSearch();
