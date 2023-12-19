@@ -313,3 +313,10 @@ const searchMovieTitle = () => {
 }
 
 findProcuct.addEventListener("keyup", searchMovieTitle);
+
+// =======Dark Mode======
+
+function myMode() {
+  var dark = document.body;
+  dark.classList.toggle('dark-mode');
+}

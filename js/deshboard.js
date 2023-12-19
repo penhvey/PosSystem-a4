@@ -76,3 +76,11 @@ function stocks_(){
   soldOut.textContent=action.sold_out
   totalSeller.textContent=action.total_solder+'$'
 }
+
+
+// =======Dark Mode======
+
+function myMode() {
+  var dark = document.body;
+  dark.classList.toggle('dark-mode');
+}

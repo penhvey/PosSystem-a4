@@ -424,3 +424,10 @@ function createCardOrder(e) {
     }
 
 }
+
+// =======Dark Mode======
+
+function myMode() {
+    var dark = document.body;
+    dark.classList.toggle('dark-mode');
+  }

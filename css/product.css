@@ -388,4 +388,44 @@ form .sumit #cancel:hover {
     background-color: #082bf3;
 }
 
+nav button {
+    background-color: #000;
+    color: white;
+    margin-left: 80%;
+    width: 90%;
+    border-radius: 50px;
+    
+}
+/* ========Dark mode======== */
+.dark-mode main {
+    background-color: rgb(24, 22, 22);
+    color: white;
+}
+.dark-mode .navbar {
+    background-color: brown;
+    color: white;
+}
+.dark-mode .navbar div button {
+    background-color: brown;
+}
+.dark-mode nav button {
+    background-color: white;
+    color: #000;
+    margin-left: 80%;
+    width: 90%;
+    border-radius: 50px;
+}
+.dark-mode nav {
+    background-color: #0f4751;
+}
+
+.dark-mode .add_product span {
+    color: #782929;
+}
+
+.dark-mode td {
+    border: 1px solid #fffbfb;
+    text-align: center;
+}
+
 /* ------------------------------------------------ */
