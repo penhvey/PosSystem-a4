@@ -111,9 +111,10 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 15%;
+    width: 18%;
     padding: 10px;
     border-radius: 10px;
+    border-style: groove;
 }
 
 .title div h3 {

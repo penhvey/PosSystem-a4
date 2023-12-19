@@ -87,12 +87,20 @@
                                 <option value="Snack">Snack</option>
                             </select>
                         </div>
+                        <div class="numberimg"  id="numberimg">
+                            <p>Add Image by Id: <span id="id">#</span></p>
+                            <input type="text">
+                            <i class='bx bxs-image-add' style="font-size: 45px;color: rgb(5, 12, 99);" id="showimge"></i>
+                        </div>
+                        
                         <div class="sumit">
                             <button type="cancel" id="cancel">Cancel</button>
                             <button type="add" id="add">Add</button>
                         </div>
-
                     </form>
+                </div>
+                <div id="ImageForAdd">
+                  <img src="../Photos/ListOfImg.jpg" width="500" height="450">  
                 </div>
                 <div class="list_of_product">
                     <h2 id="typ">All Categorys</h2>
@@ -133,6 +141,10 @@
                     <div class="price">
                         <span>Price:</span>
                         <input type="text" id="editeprice">
+                    </div>
+                    <div class="editimg">
+                        <span>#Image:</span>
+                        <input type="text" id="editnumberimg">
                     </div>
                     <div class="kind">
                         <span>Category:</span>
