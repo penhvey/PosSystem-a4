@@ -227,6 +227,7 @@ let editeQlt = document.querySelector('#editeqlt');
 let editePrice = document.querySelector('#editeprice');
 let editeCategory = document.querySelector('#category');
 let editadd = document.querySelector('#sum');
+let editC=document.querySelector('#category');
 
 
 let editCancel = document.querySelector('#can');
@@ -246,11 +247,12 @@ function getEdite(e) {
   editeName.value = edName;
   editeQlt.value = e.target.parentElement.parentElement.firstElementChild.nextSibling.nextSibling.textContent;
   editePrice.value = e.target.parentElement.parentElement.firstElementChild.nextSibling.nextSibling.nextSibling.textContent;
-
+  
   for (let value in data) {
     for (let i of data[value]) {
       if (edName === i.name) {
         editNumberImage.value = i.numberImg
+        editC.value=value
       }
     }
   }
