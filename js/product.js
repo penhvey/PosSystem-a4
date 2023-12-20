@@ -28,8 +28,6 @@ chossimg.addEventListener('mouseout',function (){
     listProduct.style.display='block'
 })
 
-
-
 let numberImg = document.querySelector('#numberimg input');
 let editNumberImage = document.querySelector('#editnumberimg');
 

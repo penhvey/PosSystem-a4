@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 
 body {
@@ -19,6 +20,8 @@ nav {
 }
 
 .navbar_left {
+    display: flex;
+    align-items: center;
     width: 50%;
 }
 
@@ -177,6 +180,10 @@ hr{
     #day-old {
         margin-top: 40%;
     }
+    #day-old {
+        margin-top: 90%;
+        height: 70%;
+    }
 
     #month-new,
     #month-old {
@@ -205,7 +212,8 @@ table {
 
 th {
     height: 40px;
-    background-color: rgb(40, 54, 244);
+    background-color: rgb(72, 82, 228);
+    color: white;
 }
 
 tbody tr:hover {
@@ -259,3 +267,4 @@ nav button {
 .dark-mode .date-old {
     color: brown;
 }
+

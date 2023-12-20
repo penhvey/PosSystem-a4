@@ -70,3 +70,18 @@ function myMode() {
     var dark = document.body;
     dark.classList.toggle('dark-mode');
   }
+
+  //....button search..............
+let searchInput = document.querySelector("#search");
+function btnSearch() {
+    if (Tbody.children[0].children[1]) {
+        let nameOf_history = Tbody.children[0].children[1].textContent;
+        if (nameOf_history.toUpperCase() || nameOf_history.toLocaleLowerCase()) {
+            Tbody.style.display=Tbody.children[0];
+            console.log(nameOf_history.toLocaleLowerCase())
+
+        } else {
+            Tbody.style.display = "none";
+        }
+}   }
+btnSearch();
