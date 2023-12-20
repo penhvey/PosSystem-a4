@@ -227,20 +227,6 @@ order.addEventListener('click', function () {
         i.remove()
     }
 
-    // for (value of arr) {
-    //     let prc = 0;
-    //     for (s in data) {
-    //         for (p of data[s]) {
-    //             if (p.name === value.name) {
-    //                 for (v of data[s]) {
-    //                     prc += v.qtl
-    //                 }
-    //             }
-    //         }
-    //     }
-
-    // }
-    console.log(store_percentage)
     for (vau of store_percentage) {
         let ob = {};
         let kindOfP = '';

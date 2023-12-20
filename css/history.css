@@ -106,6 +106,7 @@ main {
 .date-title{
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    color: rgb(235, 192, 4);
 }
 #icon-search{
     width: 30vh;
