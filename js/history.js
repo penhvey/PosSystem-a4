@@ -1,3 +1,34 @@
+let action = {
+    in_stocks: 0,
+    total_solder: 0,
+    sold_out: 0,
+    pDrink: 0,
+    pCoffee: 0,
+    pDesert: 0,
+    pSnack: 0,
+    best_solder: [],
+    low_solder_solder: [],
+};
+
+
+// Load action from local storage
+function loadaction() {
+    const storedaction = localStorage.getItem('action');
+    if (storedaction) {
+        action = JSON.parse(storedaction);
+    }
+}
+
+// Save action to local storage
+function saveaction() {
+    localStorage.setItem('action', JSON.stringify(action));
+}
+// ---------------------------------------------------------------------------
+// saveaction()
+loadaction();
+
+
+
 //........Date............ 
 function date() {
     const d = new Date();
@@ -19,25 +50,28 @@ function date() {
 date()
 
 //.......table..........
-let Tbody = document.querySelector("#tbody");
+let Tbody = document.querySelector("tbody");
 
-let trOftbody = document.createElement("tr");
-trOftbody.style.padding = "10px";
-let tdOfId = document.createElement("td");
-tdOfId.textContent = "#12";
-trOftbody.appendChild(tdOfId);
+function listOfHistory(){
 
-let tdOfName = document.createElement("td");
-tdOfName.textContent = "Sovannarith";
-trOftbody.appendChild(tdOfName);
+for (let product of action.best_solder){
 
-let tdOfDate = document.createElement("td");
-tdOfDate.textContent = "12 / Dec / 2023";
-trOftbody.appendChild(tdOfDate);
+let tr=document.createElement('tr');
+Tbody.appendChild(tr)
 
-let tdOfTotal = document.createElement("td");
-tdOfTotal.textContent = "100$";
-trOftbody.appendChild(tdOfTotal);
+let tdName=document.createElement('td');
+tdName.textContent=product.name
+tr.appendChild(tdName)
+
+let tdQtl=document.createElement('td');
+tdQtl.textContent=product.sold
+tr.appendChild(tdQtl)
+
+let dates=Date();
+dates=dates.slice(3,23)
+tdDate=document.createElement('td');
+tdDate.textContent=dates
+tr.appendChild(tdDate)
 
 let tdOfAction = document.createElement("td");
 let button = document.createElement("button");
@@ -47,22 +81,15 @@ button.style.color = 'white';
 button.style.padding = '5px 10px';
 button.style.border = 'none';
 button.style.borderRadius = '4px';
-tdOfAction.appendChild(button);
-trOftbody.appendChild(tdOfAction);
-Tbody.appendChild(trOftbody)
 
-//.........Dalete button........
-
-for (let i = 0; i < Tbody.children.length; i++) {
-    Tbody.children[0].children[4].addEventListener('click', deleteRow);
-    
+tdOfAction.appendChild(button); 
+tr.appendChild(tdOfAction)   
+button.addEventListener('click', function (e){
+    e.target.parentElement.parentElement.remove()  
+})
 }
-
-function deleteRow(e) {
-    if (window.confirm("Do you want to delete?")) {
-        Tbody.children[0].remove()
-    }
 }
+listOfHistory()
 
 // =======Dark Mode======
 
