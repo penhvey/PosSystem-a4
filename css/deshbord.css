@@ -19,6 +19,8 @@ nav {
 }
 
 .navbar_left {
+    display: flex;
+    align-items: center;
     width: 50%;
 }
 
@@ -107,7 +109,7 @@ main {
 }
 
 .title div {
-    background-color: #1e33a7c5;
+    background-color: #10228ac5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,7 +131,9 @@ main {
 }
 
 .content {
-    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin: 40px;
 }
 
 .content #p {
@@ -142,7 +146,7 @@ main {
 
 .content #p span {
     margin-left: 10px;
-    color: #1E33A7;
+    color: red;
     font-weight: bold;
 }
 
@@ -177,4 +181,17 @@ main {
     font-size: 20px;
 }
 
+#conten_bestSeller{
+    width: 100%;
+    color: green;
+    font-weight: bold;
+}
+
+#conten_lowerSeller{
+    width: 100%;
+    color: red;
+    font-weight: bold;
+}
+/* content */
+/* navbar_left */
 /* ------------------------------------------------ */

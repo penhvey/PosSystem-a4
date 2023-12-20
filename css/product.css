@@ -19,6 +19,8 @@ nav {
 }
 
 .navbar_left {
+    display: flex;
+    align-items: center;
     width: 50%;
 }
 

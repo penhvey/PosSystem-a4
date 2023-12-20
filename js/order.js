@@ -85,10 +85,10 @@ let action = {
     in_stocks: 0,
     total_solder: 0,
     sold_out: 0,
-    persontage_Drink: 0,
-    persontage_Coffee: 0,
-    persontage_Desert: 0,
-    persontage_Snack: 0,
+    pDrink: 0,
+    pCoffee: 0,
+    pDesert: 0,
+    pSnack: 0,
     best_solder: [],
     low_solder_solder: [],
 };
@@ -107,8 +107,9 @@ function saveaction() {
     localStorage.setItem('action', JSON.stringify(action));
 }
 // ---------------------------------------------------------------------------
-
+// saveaction()
 loadaction();
+
 let pQ = 0;
 for (st in data) {
     if (data[st] != []) {
@@ -213,8 +214,7 @@ function createCard(stock, product) {
 
 let order = document.querySelector('#order');
 let numberProductOrder = 0;
-let pQtl = [];
-
+let store_percentage = [];
 
 order.addEventListener('click', function () {
     action.in_stocks -= numberProductOrder
@@ -227,28 +227,76 @@ order.addEventListener('click', function () {
         i.remove()
     }
 
+    // for (value of arr) {
+    //     let prc = 0;
+    //     for (s in data) {
+    //         for (p of data[s]) {
+    //             if (p.name === value.name) {
+    //                 for (v of data[s]) {
+    //                     prc += v.qtl
+    //                 }
+    //             }
+    //         }
+    //     }
 
-    for (value of arr) {
-        let prc = 0;
-        for (s in data) {
-            for (p of data[s]) {
-                if (p.name === value.name) {
-                    for (v of data[s]) {
-                        prc += v.qtl
+    // }
+    console.log(store_percentage)
+    for (vau of store_percentage) {
+        let ob = {};
+        let kindOfP = '';
+        let totalQtl = 0;
+
+        for (st in data) {
+            for (pd of data[st]) {
+                if (vau.name === pd.name) {
+                    kindOfP = st
+                    for (p of data[kindOfP]) {
+                        totalQtl += p.qtl
                     }
                 }
             }
         }
 
-    }
+        let n = vau.pQtl + totalQtl
+        let percen = (vau.pQtl / n) * 100 + ''
+        let process = true
+        let dataP = ''
+        for (nP of percen) {
+            if (nP != '.' && process) {
+                dataP += nP
+            } else {
+                process = false
+            }
+        }
+        action['p' + kindOfP] += parseInt(dataP)
 
+        ob.name = vau.name
+        ob.sold = vau.pQtl
+        if (action.best_solder.length != 0) {
+            let pro = true
+            for (va of action.best_solder) {
+                if (va.name === ob.name) {
+                    va.sold += ob.sold
+                    pro = false
+                }
+            }if (pro) {
+                    action.best_solder.push(ob)
+                }
+        } else {
+            action.best_solder.push(ob)
+
+        }
+
+    }
+    
+    saveaction()
+    store_percentage = []
     arr = []
     numberProductOrder = 0
     processTotal = 0
     totalOrder.textContent = '0$'
 
 })
-
 
 let listCardOrder = document.querySelector('#h')
 let cancelOrder = document.querySelector('#cancelorder');
@@ -265,7 +313,7 @@ cancelOrder.addEventListener('click', function () {
         document.querySelector('#qt' + p.name).textContent = parseInt(p.qtl)
     }
     arr = [];
-
+    store_percentage = []
     processTotal = 0;
     totalOrder.textContent = '0$'
     numberProductOrder = 0
@@ -282,6 +330,7 @@ function createCardOrder(e) {
     let price = parseInt(prices.slice(process.length, -1))
     obj.price = price
 
+
     let in_stock = true
 
     for (stock of arr) {
@@ -295,7 +344,6 @@ function createCardOrder(e) {
         in_stock = false
         alert(obj.name + ' is out of stock!')
     }
-
 
     if (in_stock) {
 
@@ -315,6 +363,11 @@ function createCardOrder(e) {
         totalOrder.textContent = processTotal + '$'
 
         numberProductOrder += 1
+
+        let pName = {}
+        pName.name = obj.name
+        pName.pQtl = 1
+        store_percentage.push(pName)
 
         let cardOrder = document.createElement('div');
         cardOrder.id = 'unorder'
@@ -336,7 +389,8 @@ function createCardOrder(e) {
         cardOrder.appendChild(minusQtl);
 
         minusQtl.addEventListener('click', function (e) {
-            let getQtl = {};
+            let pName = {}
+
             let minusQtlProduct = e.target.parentElement.firstElementChild.textContent
             let minusPrice = e.target.parentElement.firstElementChild.nextSibling.textContent
 
@@ -356,16 +410,33 @@ function createCardOrder(e) {
                 totalOrder.textContent = processTotal + '$';
 
                 numberProductOrder += parseInt(orderQtl.textContent);
+
+                if (store_percentage.length > 0) {
+                    for (i = 0; i < store_percentage.length; i++) {
+                        if (store_percentage[i].name === minusQtlProduct) {
+                            if (parseInt(orderQtl.textContent) > 0) {
+                                store_percentage[i].pQtl = parseInt(orderQtl.textContent)
+                            } else {
+                                store_percentage.splice(i, 1);
+                            }
+
+                        }
+                    }
+                } else {
+                    pName.name = minusQtlProduct
+                    pName.pQtl = parseInt(orderQtl.textContent)
+                    store_percentage.push(pName)
+                }
+                // ---------------------------------------------
                 for (s in data) {
                     for (d of data[s]) {
-                        if (d.name === addOtlProduct) {
+                        if (d.name === minusQtlProduct) {
                             d.qtl = parseInt(cardProduct.textContent)
                         }
                     }
                 }
 
             } else {
-                alert(minusQtlProduct + ' was removed!')
                 e.target.parentElement.remove()
                 for (v in data) {
                     for (i of data[v]) {
@@ -375,10 +446,23 @@ function createCardOrder(e) {
                         }
                     }
                 }
+
                 processTotal -= (parseInt(orderQtl.textContent * minusPrice))
                 totalOrder.textContent = processTotal + '$'
                 numberProductOrder -= parseInt(orderQtl.textContent)
+                document.querySelector('#qt' + minusQtlProduct).textContent = parseInt(document.querySelector('#qt' + minusQtlProduct).textContent) + parseInt(orderQtl.textContent)
                 arr = []
+
+                for (i = 0; i < store_percentage.length; i++) {
+                    if (store_percentage[i].name === minusQtlProduct) {
+                        if (parseInt(orderQtl.textContent) === 1) {
+                            store_percentage.splice(i, 1);
+                        }
+
+                    }
+                }
+
+                alert(minusQtlProduct + ' was removed!')
             }
         })
 
@@ -392,6 +476,7 @@ function createCardOrder(e) {
         cardOrder.appendChild(addQtl)
 
         addQtl.addEventListener('click', function (e) {
+            let pName = {}
             let addOtlProduct = e.target.parentElement.firstElementChild.textContent
             let cardProduct = document.querySelector('#qt' + addOtlProduct)
             let orderQtl = e.target.parentElement.children[3]
@@ -408,6 +493,21 @@ function createCardOrder(e) {
                 processTotal += (parseInt(minusPrice) * parseInt(orderQtl.textContent))
                 totalOrder.textContent = processTotal + '$'
                 numberProductOrder += parseInt(orderQtl.textContent)
+
+                if (store_percentage.length > 0) {
+                    for (v of store_percentage) {
+                        if (v.name === addOtlProduct) {
+                            v.pQtl = parseInt(orderQtl.textContent)
+                        }
+                    }
+                    console.log(store_percentage)
+                } else {
+                    pName.name = addOtlProduct
+                    pName.pQtl = parseInt(orderQtl.textContent)
+                    store_percentage.push(pName)
+                    console.log(store_percentage)
+                }
+                // -------------------------------------------------------
 
                 for (s in data) {
                     for (d of data[s]) {

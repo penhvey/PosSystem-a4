@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 
 body {
@@ -19,6 +20,8 @@ nav {
 }
 
 .navbar_left {
+    display: flex;
+    align-items: center;
     width: 50%;
 }
 
@@ -245,6 +248,7 @@ main .products .contents h2{
 }
 main .products .contents div .content .card .cardtitle div {
     display: flex;
+    align-items: center;
 }
 main .products .contents div .content .card .cardtitle div span{
     color: #060f94;

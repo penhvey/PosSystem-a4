@@ -14,7 +14,10 @@
     <!-- ---------------navbarTop-------------------- -->
     <nav>
         <div class="navbar_left">
-            <h1>Possystem</h1>
+            <i class='bx bxl-graphql bx-spin'
+            style="font-size: 60px;color: rgb(241, 48, 215);margin-right: 10px;"></i>
+            
+            <h1>PosSystem</h1>
         </div>
         <div class="navbar_right">
             <i class='bx bxs-user-circle' style="font-size: 30px"></i>
@@ -38,64 +41,77 @@
         </div>
         <!-- -------------------main-----------------------------     -->
         <main>
+            <i class='bx bx-rotate-right' style="font-size: 30px;" id="replace"></i>
             <div class="title">
                 <div class="stock">
-                    <i class='bx bx-candles bx-spin' style="font-size: 50px;color: rgb(241, 48, 193);margin-right: 10px;" ></i>
+                    <i class='bx bx-candles bx-spin'
+                        style="font-size: 50px;color: rgb(241, 48, 193);margin-right: 10px;"></i>
                     <h3>In Stoct : </h3>
                     <span>250</span>
                 </div>
                 <div class="category">
-                    <i class='bx bxs-category-alt bx-spin'style="font-size: 50px;color: #b800fa;;margin-right: 10px;"  ></i>
+                    <i class='bx bxs-category-alt bx-spin'
+                        style="font-size: 50px;color: #b800fa;;margin-right: 10px;"></i>
                     <h3>Category :</h3>
                     <span>4</span>
                 </div>
                 <div class="soldout">
-                    <i class='bx bx-selection bx-spin'style="font-size: 50px;color: rgb(241, 48, 193);margin-right: 10px;" ></i>
+                    <i class='bx bx-cart-download bx-tada'style="font-size: 50px;color: rgb(241, 48, 193);margin-right: 10px;" ></i>
                     <h3>Sold out :</h3>
                     <span>50</span>
                 </div>
                 <div class="income">
-                    <i class='bx bxs-data bx-spin'style="font-size: 50px;color: #FFD700;margin-right: 10px;" ></i>
+                    <i class='bx bxs-data bx-spin' style="font-size: 50px;color: #FFD700;margin-right: 10px;"></i>
                     <h3>Income :</h3>
                     <span>50000$</span>
                 </div>
             </div>
-            <div class="content" >
+            <div class="content">
                 <div class="drink" id="p">
-                   <h3>Drink:</h3> 
-                   <span>0%</span>
+                    <h3>Drink:</h3>
+                    <span id="percenDrink">0%</span>
+                    <i class='bx bx-objects-vertical-bottom'
+                        style="font-size: 30px;margin-left: 30px;color: #4b00fa;"></i>
                 </div>
                 <div class="coffee" id="p">
-                   <h3>Coffee:</h3> 
-                   <span>0%</span>
+                    <h3>Coffee:</h3>
+                    <span id="personCoffee">0%</span>
+                    <i class='bx bx-objects-vertical-bottom'
+                        style="font-size: 30px;margin-left: 30px;color: #4b00fa;"></i>
                 </div>
                 <div class="dedert" id="p">
-                   <h3>Desert:</h3> 
-                   <span>0%</span>
+                    <h3>Desert:</h3>
+                    <span id="personDesert">0%</span>
+                    <i class='bx bx-objects-vertical-bottom'
+                        style="font-size: 30px;margin-left: 30px;color: #4b00fa;"></i>
                 </div>
                 <div class="snack" id="p">
-                   <h3>Snack:</h3> 
-                   <span>0%</span>
+                    <h3>Snack:</h3>
+                    <span id="personSnack">0%</span>
+                    <i class='bx bx-objects-vertical-bottom'
+                        style="font-size: 30px; margin-left: 30px;color: #4b00fa;"></i>
                 </div>
-                
-                <div class="list">
-                    <div class="topsoldout">
-                        <h2>Best seller</h2>
-                        <p>Late</p>
-                        <p>Tea</p>
+
+
+            </div>
+            <div class="list">
+                <div class="topsoldout">
+                    <h2>Best seller</h2>
+                    <div id="conten_bestSeller">
+                        <!-- <p>Late</p>
+                            <p>Tea</p> -->
                     </div>
-                    <div class="lessoldout">
-                        <h2>Lowest sales</h2>
-                        <p>BBQ</p>
-                        <p>BBQ</p>
+                </div>
+                <div class="lessoldout">
+                    <h2>Lowest sales</h2>
+                    <div id="conten_lowerSeller">
                     </div>
-                    <div class="moneysold">
-                        <h2>Total sales</h2>
-                        <p>200$ / 20%</p>
-                    </div>
+                </div>
+                <div class="moneysold">
+                    <h2>Total sales</h2>
+                    <p>200$ / 20%</p>
                 </div>
             </div>
-
         </main>
     </div>
 </body>
