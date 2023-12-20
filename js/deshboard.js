@@ -106,12 +106,14 @@ function getAllProduct() {
     }
   }
   categorys.textContent = category
-  income.textContent = incom + '$'
 }
 function stocks_() {
   stocks.textContent = action.in_stocks;
   soldOut.textContent = action.sold_out;
   totalSeller.textContent = action.total_solder + '$';
+
+  let p=parseFloat(income.textContent)
+  income.textContent = (parseInt(p)+action.total_solder)+'$'
 
   percenDrink.textContent = action.pDrink + '%';
 
