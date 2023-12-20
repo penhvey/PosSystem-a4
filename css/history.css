@@ -106,7 +106,6 @@ main {
 .date-title{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    color: rgb(235, 192, 4);
 }
 #icon-search{
     width: 30vh;
@@ -148,53 +147,17 @@ hr{
     margin-left: 2%;
 }
 
-
+.date-new{
+    border: 1px solid #000;
+    font-size: 30px;
+    margin-top: 20px;
+}
 .date {
+    display: flex;
     width: 60vh;
-    display: grid;
-    margin-left: 50vh;
-    margin-top: 2%;
-    margin-bottom: 30px;
-    grid-template-columns: repeat(3, 1fr);
-
-    .date-old,
-    .date-new {
-        width: 25vh;
-        height: 30px;
-        padding-right: 5%;
-        background-color: rgb(239, 239, 239);
-        border: 1px solid;
-        border-radius: 10px;
-        font-size: 15px;
-        display: grid;
-        gap: 6%;
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .date-new img,
-    .date-old img {
-        margin-top: 5px;
-        margin-left: 4%;
-    }
-
-    #day-new,
-    #day-old {
-        margin-top: 40%;
-    }
-    #day-old {
-        margin-top: 90%;
-        height: 70%;
-    }
-
-    #month-new,
-    #month-old {
-        margin-top: 10%;
-    }
-
-    #year-new,
-    #year-old {
-        margin-top: 19%;
-    }
+    height: 20px;
+    color: #1E33A7;
+    font-weight: bold;
 }
 
 #text {
